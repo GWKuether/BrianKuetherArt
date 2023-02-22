@@ -36,7 +36,7 @@ const CommissionsPage = (props) => {
         <input
           type="text"
           name="from_name"
-          placeholder="from name"
+          placeholder="Your name"
           value={toSend.from_name}
           onChange={handleChange}
         />
