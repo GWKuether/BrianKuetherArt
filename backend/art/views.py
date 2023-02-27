@@ -1,3 +1,14 @@
-from django.shortcuts import render
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from .serializers import ArtSerlializer
+from .models import Art
 
-# Create your views here.
+
+
+@api_view(['GET'])
+def art_list(request):
+    art = Art.objects.all()
+    serializer = ArtSerlializer(art, many=True)
+    
+    return Response(serializer.data)
+    
