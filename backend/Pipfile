@@ -9,6 +9,8 @@ mysqlclient = "*"
 djangorestframework = "*"
 mysql-connector-python = "*"
 pillow = "*"
+django-cors-headers = "*"
+tzdata = "*"
 
 [dev-packages]
 

@@ -30,6 +30,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'corsheaders',
     'art',
     'rest_framework',
     'django.contrib.admin',
@@ -48,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware'
 ]
 
 ROOT_URLCONF = 'brian_kuether_art_project.urls'
@@ -71,7 +73,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'brian_kuether_art_project.wsgi.application'
 
 
-
+CORS_ORIGIN_ALLOW_ALL = True
 
 
 # Password validation

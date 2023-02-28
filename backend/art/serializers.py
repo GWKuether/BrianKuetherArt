@@ -5,3 +5,4 @@ class ArtSerlializer(serializers.ModelSerializer):
     class Meta:
         model = Art
         fields = ['id', 'title', 'image', 'price', 'sold']
+        depth = 1
