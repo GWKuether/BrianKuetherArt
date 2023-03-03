@@ -117,6 +117,12 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+import os
+
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = ''
+MEDIA_URL = ''
+
 
 try:
     from brian_kuether_art_project.local_settings import *

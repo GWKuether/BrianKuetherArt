@@ -5,10 +5,15 @@ from .models import Art
 
 
 
+# @api_view(['GET'])
+# def art_list(request):
+#     art = Art.objects.all()
+#     serializer = ArtSerlializer(art, many=True, context={'request': request})
+    
+#     return Response(serializer.data)
+
 @api_view(['GET'])
 def art_list(request):
-    art = Art.objects.all()
-    serializer = ArtSerlializer(art, many=True)
-    
+    qs = Art.objects.all()
+    serializer = ArtSerlializer(qs, many=True, context={'request': request})
     return Response(serializer.data)
-    

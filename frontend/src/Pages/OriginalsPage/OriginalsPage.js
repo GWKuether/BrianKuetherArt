@@ -21,7 +21,9 @@ const OriginalsPage = (props) => {
     return ( 
         <div>
         <p>This is the originals page</p>
-        {/* <img src={artWork[0].image} alt="buffalo"></img> */}
+        {/* <p>{artWork[0].image}</p> */}
+        <img src={artWork[0].image} alt="buffalo"></img>
+        {/* <p>{artWork[0].price}</p> */}
         </div>
      );
 }
