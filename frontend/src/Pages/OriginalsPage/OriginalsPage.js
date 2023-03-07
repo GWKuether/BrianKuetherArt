@@ -22,7 +22,8 @@ const OriginalsPage = (props) => {
         <div>
         <p>This is the originals page</p>
         {/* <p>{artWork[0].image}</p> */}
-        <img src={artWork[0].image} alt="buffalo"></img>
+        <img style={{height: "10em", width:"10em"}} src={artWork[1]?.image} alt="owls"></img>
+        <img style={{height: "10em", width:"10em"}} src={artWork[0]?.image} alt="buffalo"></img>
         {/* <p>{artWork[0].price}</p> */}
         </div>
      );
