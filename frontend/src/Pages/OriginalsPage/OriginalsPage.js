@@ -17,14 +17,19 @@ const OriginalsPage = (props) => {
     }
 
 
+    function displayArt(){
+        let results = artWork.map((image) =>{
+            return <img style={{height: "10em", width:"10em"}} src={image.image} alt="art" ></img>
+        })
+        return results
+    }
+
+
 
     return ( 
         <div>
         <p>This is the originals page</p>
-        {/* <p>{artWork[0].image}</p> */}
-        <img style={{height: "10em", width:"10em"}} src={artWork[1]?.image} alt="owls"></img>
-        <img style={{height: "10em", width:"10em"}} src={artWork[0]?.image} alt="buffalo"></img>
-        {/* <p>{artWork[0].price}</p> */}
+        {displayArt()}
         </div>
      );
 }
