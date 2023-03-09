@@ -6,16 +6,24 @@ const PiecePage = (props) => {
 
     const piece = state.state
 
-    console.log(piece)
+    function checkSold(){
+         if (piece.imageSold === true){
+            return <h3>SOLD</h3>
+            }
+            else{
+                return <h3>{piece.imagePrice}</h3>
+            }
+        }
 
 
     return ( 
         <div>
-        <p>This is where I'm going to display the individual art piece</p>
+        <h1>{piece.imageTitle}</h1>
         <img src={piece.imageLocation} alt="Piece"></img>
+        <h3>{piece.imageSize}</h3>
+        {checkSold()}
         </div>
-
-     );
+     )
 }
  
 export default PiecePage;
