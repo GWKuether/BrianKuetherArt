@@ -8,6 +8,7 @@ import CommissionsPage from './Pages/CommissionsPage/CommissionsPage';
 import OriginalsPage from './Pages/OriginalsPage/OriginalsPage';
 import PortraitsPage from './Pages/PortraitsPage/PortraitsPage';
 import PrintsPage from './Pages/PrintsPage/PrintsPage';
+import PiecePage from './Pages/PiecePage/PiecePage';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Route path="/originals" element={<OriginalsPage />} />
       <Route path="/portraits" element={<PortraitsPage />} />
       <Route path="/prints" element={<PrintsPage />} />
+      <Route path="/piece" element={<PiecePage />} />
     </Routes>
     </div>
   );

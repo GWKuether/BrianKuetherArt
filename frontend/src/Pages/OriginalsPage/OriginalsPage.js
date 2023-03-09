@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 
@@ -16,10 +17,24 @@ const OriginalsPage = (props) => {
         setArtWork(response.data)
     }
 
+    const navigate = useNavigate();
+
+    function handleImageClick(image){
+        let imageID = {
+            imageID : image.id,
+            imageTitle: image.title,
+            imageLocation: image.image,
+            imagePrice: image.price,
+            imageSold: image.sold,
+            imageSize: image.size
+          };
+        navigate("/piece", { state: imageID });
+    }
+
 
     function displayArt(){
         let results = artWork.map((image) =>{
-            return <img style={{height: "10em", width:"10em"}} src={image.image} alt="art" ></img>
+            return <img style={{height: "10em", width:"10em"}} onClick={() => handleImageClick(image)} src={image.image} alt="art" ></img>
         })
         return results
     }
