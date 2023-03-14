@@ -3,11 +3,8 @@ import { useNavigate } from "react-router-dom";
 
 const NavBar = (props) => {
 
-    const navigate = useNavigate();
+      const navigate = useNavigate();
 
-    const handleHomeClick = () => {
-        navigate("/");
-      };
 
       const handleOriginalsClick = () => {
         navigate("/originals");
@@ -32,7 +29,6 @@ const NavBar = (props) => {
 
     return (
         <div style={{display: "flex", justifyContent: "space-around"}}>
-            <h2 onClick={() => handleHomeClick()}>Home</h2>
             <h2 onClick={() => handleOriginalsClick()}>Originals</h2>
             <h2 onClick={() => handlePrintsClick()}>Prints</h2>
             <h2 onClick={() => handleBioClick()}>Bio</h2>

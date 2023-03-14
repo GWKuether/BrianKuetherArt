@@ -9,11 +9,23 @@ import OriginalsPage from './Pages/OriginalsPage/OriginalsPage';
 import PortraitsPage from './Pages/PortraitsPage/PortraitsPage';
 import PrintsPage from './Pages/PrintsPage/PrintsPage';
 import PiecePage from './Pages/PiecePage/PiecePage';
+import { useNavigate } from "react-router-dom";
 
 function App() {
+
+  const navigate = useNavigate();
+
+  const handleHomeClick = () => {
+      navigate("/");
+    };
+
+    
+
+
+
   return (
     <div>
-      <h1>Brian Kuether Art Studio</h1>
+      <h1 onClick={() => handleHomeClick()}>Brian Kuether Art Studio</h1>
     <NavBar />
     <Routes>
       <Route path="/" element={<HomePage />} />
