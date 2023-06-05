@@ -31,11 +31,13 @@ const OriginalsPage = (props) => {
 
   function displayArt() {
     let results = artWork.map((image) => {
+      const height = image.size.substring(0,2) + "em"
+      const width = image.size.substring(5,7) + "em"
       return (
           <div className="box">
             <h4 style={{display: "flex", justifyContent: "center"}}>{image.title}</h4>
             <img
-              style={{ height: "15em", width: "15em", margin: "1em" }}
+              style={{ height: `${height}`, width: `${width}`, margin: "1em" }}
               onClick={() => handleImageClick(image)}
               src={image.image}
               alt="art"
